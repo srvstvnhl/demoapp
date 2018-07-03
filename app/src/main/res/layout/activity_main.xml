@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/dollarEditText"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Enter the dollars"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="219dp"
+        android:onClick="convert"
+        android:text="convert" />
+
+    <ImageView
+        android:id="@+id/dollarImageView"
+        android:layout_width="42dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/dollarEditText"
+        android:layout_marginEnd="73dp"
+        app:srcCompat="@drawable/usd" />
+
+    <ImageView
+        android:id="@+id/rupeesImageView"
+        android:layout_width="44dp"
+        android:layout_height="85dp"
+        android:layout_alignStart="@+id/dollarImageView"
+        android:layout_below="@+id/dollarEditText"
+        app:srcCompat="@drawable/inr" />
+
+    <view
+        android:id="@+id/rupeesEditText"
+        class="android.support.v7.widget.AppCompatAutoCompleteTextView"
+        id="@+id/view"
+        layout_alignParentBottom="true"
+        layout_alignParentStart="true"
+        layout_centerVertical="true"
+        layout_marginBottom="25dp"
+        layout_marginStart="99dp"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/dollarEditText"
+        android:layout_marginTop="140dp" />
+</RelativeLayout>
